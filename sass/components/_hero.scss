@@ -1,0 +1,87 @@
+.hero {
+  @include centeredFlex;
+  flex-direction: column;
+  width: 480px;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+
+  background-color: #2f303a;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/fon-w480.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 480px 400px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(.../images/fon-w480@2x.jpg);
+
+    @media screen and (min-width: 768px) {
+      width: 768px;
+      height: 400px;
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/fon-w768.jpg);
+    }
+  }
+
+  //  height: 600px;
+  // max-width: 1600px;
+}
+
+.hero__title {
+  max-width: 360px;
+  color: var(--white-text-background-color);
+  font-weight: 900;
+  font-style: normal;
+  font-size: 26px;
+  line-height: 1.615;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  // max-width: 696px;
+  //  font-size: 44px;
+  // line-height: 1.364;
+}
+
+.hero__btn {
+  margin-top: 30px;
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+
+  border: 1px solid transparent;
+
+  color: var(--white-text-background-color);
+  background-color: var(--interactive-color);
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--headers-color);
+  }
+}

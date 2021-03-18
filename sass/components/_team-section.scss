@@ -1,0 +1,117 @@
+.team {
+  background-color: var(--section-team-background-color);
+}
+
+.team__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  color: var(--headers-color);
+  background-color: var(--section-team-background-color);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 1.1785;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.1717;
+  }
+}
+
+.team-list {
+  @media screen and (min-width: 758px) {
+    @include centeredFlex($positionH: space-between);
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
+  }
+}
+
+.team-list__item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    @media screen and (max-width: 757px) {
+      margin-bottom: var(--card-set-gap);
+    }
+  }
+
+  @media screen and (min-width: 758px) {
+    flex-basis: calc((100% - 2 * var(--card-set-gap)) / 2);
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 4 * var(--card-set-gap)) / 4);
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+  }
+}
+
+.team-list__title {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  color: var(--headers-color);
+  background-color: var(--white-text-background-color);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.team-list__text {
+  margin: 0;
+  color: var(--text-color);
+  background-color: var(--white-text-background-color);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.social-list {
+  @include centeredFlex;
+  padding: 16px 32px 30px;
+  background-color: var(--white-text-background-color);
+}
+
+.social-list__link {
+  @include centeredFlex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: var(--link-normal-color);
+  background-color: var(--white-text-background-color);
+
+  @include transition(color);
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    color: var(--white-text-background-color);
+    background-color: var(--interactive-color);
+    outline: none;
+  }
+}
+
+.social-list__icon {
+  fill: currentColor;
+
+  @include transition(color);
+
+  .social-list__link:hover &,
+  .social-list__link:focus & {
+    fill: currentColor;
+    background-color: var(--interactive-color);
+    outline: none;
+  }
+}

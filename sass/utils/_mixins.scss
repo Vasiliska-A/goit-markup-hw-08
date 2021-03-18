@@ -1,0 +1,15 @@
+@mixin centeredFlex($type: flex, $positionH: center, $positionV: center) {
+  display: $type;
+  justify-content: $positionH;
+  align-items: $positionV;
+}
+
+@mixin transition($type) {
+  transition: $type 250ms var(--time-function);
+}
+
+@mixin window-centered() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

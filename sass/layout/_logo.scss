@@ -1,0 +1,31 @@
+.logo {
+  display: block;
+  font-family: var(--logo-font);
+  text-decoration: none;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1.1738;
+
+  &:focus {
+    color: var(--interactive-color);
+
+    @media screen and (min-width: 1200px) {
+      font-size: 26px;
+    }
+  }
+
+  &__accent-part {
+    color: var(--interactive-color);
+  }
+}
+
+.header__logo {
+  margin-right: 93px;
+  color: var(--logo-color);
+}
+
+.footer__logo {
+  color: var(--white-text-background-color);
+  text-align: center;
+}
