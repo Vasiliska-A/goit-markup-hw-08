@@ -92,10 +92,12 @@
               >
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/technokriak@1x.jpg 1x,
+                      ./images/technokriak@2x.jpg 2x
+                    "
                     src="./images/technokriak.jpg   "
                     alt="ТехноКряк"
-                    width="380"
-                    height="296"
                   />
                   <p class="project__overlay">
                     Технокряк это современная площадка распространения
@@ -118,10 +120,12 @@
               >
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/posternovsgs@1x.jpg 1x,
+                      ./images/posternovsgs@2x.jpg 2x
+                    "
                     src="./images/posternovsgs.jpg"
                     alt="Постер New Orlean vs Golden Star"
-                    width="380"
-                    height="296"
                   />
                   <p class="project__overlay">
                     Технокряк это современная площадка распространения
@@ -146,10 +150,12 @@
               >
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/seafoodrestaurant@1x.jpg 1x,
+                      ./images/seafoodrestaurant@2x.jpg 2x
+                    "
                     src="./images/seafoodrestaurant.jpg"
                     alt="Ресторан Seafood"
-                    width="380"
-                    height="296"
                   />
                   <p class="project__overlay">
                     Технокряк это современная площадка распространения
@@ -172,10 +178,12 @@
               >
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/projectprime@1x.jpg 1x,
+                      ./images/projectprime@2x.jpg 2x
+                    "
                     src="./images/projectprime.jpg"
                     alt="Проект Prime"
-                    width="380"
-                    height="296"
                   />
                   <p class="project__overlay">
                     Технокряк это современная площадка распространения
@@ -198,10 +206,12 @@
               >
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/projectboxes@1x.jpg 1x,
+                      ./images/projectboxes@2x.jpg 2x
+                    "
                     src="./images/projectboxes.jpg "
                     alt="Проект Boxes"
-                    width="380"
-                    height="296"
                   />
                   <p class="project__overlay">
                     Технокряк это современная площадка распространения
@@ -224,10 +234,12 @@
               >
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/inspirationhasnoborders@1x.jpg 1x,
+                      ./images/inspirationhasnoborders@2x.jpg 2x
+                    "
                     src="./images/inspirationhasnoborders.jpg"
                     alt="Inspiration has no Borders"
-                    width="380"
-                    height="296"
                   />
                   <p class="project__overlay">
                     Технокряк это современная площадка распространения
@@ -245,10 +257,12 @@
               <a href="#" target="_blank" title="Дизайн" class="project__link">
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/limitededition@1x.jpg 1x,
+                      ./images/limitededition@2x.jpg 2x
+                    "
                     src="./images/limitededition.jpg"
                     alt="Издание Limited Edition"
-                    width="380"
-                    height="296"
                   />
                   <p class="project__overlay">
                     Технокряк это современная площадка распространения
@@ -271,10 +285,12 @@
               >
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/projectlab@1x.jpg 1x,
+                      ./images/projectlab@2x.jpg 2x
+                    "
                     src="./images/projectlab.jpg"
                     alt="Проект LAB"
-                    width="380"
-                    height="296"
                   />
                   <p class="project__overlay">
                     Технокряк это современная площадка распространения
@@ -297,10 +313,12 @@
               >
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/growingbusiness@1x.jpg 1x,
+                      ./images/growingbusiness@2x.jpg 2x
+                    "
                     src="./images/growingbusiness.jpg "
                     alt="Growing Business"
-                    width="380"
-                    height="296"
                   />
                   <p class="project__overlay">
                     Технокряк это современная площадка распространения
@@ -321,77 +339,93 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <div class="address-box">
-            <a href="index.html" class="logo footer__logo"
-              ><span class="logo__accent-part">Web</span>Studio</a
-            >
-            <address class="address">
-              <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
-              <ul class="footer-contacts-list">
-                <li>
+          <div class="tablet-footer">
+            <div class="address-box">
+              <a href="index.html" class="logo footer__logo"
+                ><span class="logo__accent-part">Web</span>Studio</a
+              >
+              <address class="address">
+                <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
+                <ul class="footer-contacts-list">
+                  <li>
+                    <a
+                      href="mailto:info@devstudio.com"
+                      class="footer-contacts-list__item"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="tel:+380961111111"
+                      class="footer-contacts-list__item"
+                      >+38 096 111 11 11</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <div class="footer-social">
+              <span class="footer-social__slogan">присоединяйтесь</span>
+              <ul class="social-list footer-social-list">
+                <li class="footer-social-list__item">
                   <a
-                    href="mailto:info@devstudio.com"
-                    class="footer-contacts-list__item"
-                    >info@devstudio.com</a
+                    href="#"
+                    class="social-list__link footer-social-list__link"
                   >
+                    <svg
+                      class="social-list__icon footer-social-list__icon"
+                      width="20"
+                      height="20"
+                    >
+                      <use href="./images/svg-sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li>
-                  <a href="tel:+380961111111" class="footer-contacts-list__item"
-                    >+38 096 111 11 11</a
+                <li class="footer-social-list__item">
+                  <a
+                    href="#"
+                    class="social-list__link footer-social-list__link"
                   >
+                    <svg
+                      class="social-list__icon footer-social-list__icon"
+                      width="20"
+                      height="20"
+                    >
+                      <use href="./images/svg-sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-social-list__item">
+                  <a
+                    href="#"
+                    class="social-list__link footer-social-list__link"
+                  >
+                    <svg
+                      class="social-list__icon footer-social-list__icon"
+                      width="20"
+                      height="20"
+                    >
+                      <use href="./images/svg-sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="footer-social-list__item">
+                  <a
+                    href="#"
+                    class="social-list__link footer-social-list__link"
+                  >
+                    <svg
+                      class="social-list__icon footer-social-list__icon"
+                      width="20"
+                      height="20"
+                    >
+                      <use href="./images/svg-sprite.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
-            </address>
-          </div>
-          <div class="footer-social">
-            <span class="footer-social__slogan">присоединяйтесь</span>
-            <ul class="social-list footer-social-list">
-              <li class="footer-social-list__item">
-                <a href="#" class="social-list__link footer-social-list__link">
-                  <svg
-                    class="social-list__icon footer-social-list__icon"
-                    width="20"
-                    height="20"
-                  >
-                    <use href="./images/svg-sprite.svg#icon-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer-social-list__item">
-                <a href="#" class="social-list__link footer-social-list__link">
-                  <svg
-                    class="social-list__icon footer-social-list__icon"
-                    width="20"
-                    height="20"
-                  >
-                    <use href="./images/svg-sprite.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer-social-list__item">
-                <a href="#" class="social-list__link footer-social-list__link">
-                  <svg
-                    class="social-list__icon footer-social-list__icon"
-                    width="20"
-                    height="20"
-                  >
-                    <use href="./images/svg-sprite.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="footer-social-list__item">
-                <a href="#" class="social-list__link footer-social-list__link">
-                  <svg
-                    class="social-list__icon footer-social-list__icon"
-                    width="20"
-                    height="20"
-                  >
-                    <use href="./images/svg-sprite.svg#icon-linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            </div>
           </div>
           <div class="subscribe">
             <form class="subscribe__form">

@@ -27,5 +27,7 @@
 
 .footer__logo {
   color: var(--white-text-background-color);
-  text-align: center;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }

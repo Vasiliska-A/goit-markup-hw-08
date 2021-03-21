@@ -16,7 +16,7 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-}
+  }
 }
 
 .modal {
@@ -25,22 +25,33 @@
   left: 50%;
 
   padding: 40px;
-  min-width: 528px;
-  min-height: 581px;
 
   background-color: var(--white-text-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  
+
   transform: translate(-50%, -50%) scale(1);
   @include transition(transform);
 
   .backdrop.is-hidden & {
-  transform: translate(-50%, -50%) scale(0.85);
+    transform: translate(-50%, -50%) scale(0.85);
   }
 
+  @media screen and (max-width: 1199px) {
+    width: 450px;
+    height: 609px;
+  }
 
+  @media screen and (max-width: 479px) {
+    width: 100vw;
+    height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .btn-svg {
@@ -55,6 +66,11 @@
   background: var(--white-text-background-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    fill: var(--interactive-color);
+  }
 }
 
 /* Стилізація форми в модалці */
@@ -107,9 +123,7 @@
   .form-label:hover & {
     fill: var(--interactive-color);
   }
-  
 }
-
 
 .form-label__input {
   width: 100%;
@@ -126,7 +140,7 @@
   line-height: 1.167;
   letter-spacing: 0.01em;
 
-  @include transition (border-color);
+  @include transition(border-color);
 
   .form-label:hover & {
     border-color: var(--interactive-color);
@@ -142,7 +156,6 @@
   }
 }
 
-
 .form-label__input--comment {
   width: 100%;
   height: 96px;
@@ -151,7 +164,7 @@
 }
 
 .checkbox {
-  @include centeredFlex ($positionH:space-evenly);
+  @include centeredFlex($positionH: space-evenly);
   cursor: pointer;
 }
 
@@ -165,22 +178,28 @@
 }
 
 .checkbox__text {
-  @include centeredFlex ($positionH:space-around);
+  // @include centeredFlex($positionH: space-around);
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.1716;
   letter-spacing: 0.03em;
 
   color: var(--text-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.7143;
+  }
 }
 
 .checkbox__link {
   color: var(--interactive-color);
-  margin-left: 5px;
+  text-decoration: underline;
 }
 
 .checkbox__icon {
+  margin-right: 8px;
   border: 2px solid var(--headers-color);
   border-radius: 4px;
 }
@@ -192,7 +211,6 @@
     display: block;
   }
 }
-
 
 /*   */
 
@@ -216,7 +234,7 @@
   text-align: center;
   letter-spacing: 0.06em;
 
-  @include transition (color);
+  @include transition(color);
 
   &:hover,
   &:focus {

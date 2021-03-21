@@ -73,7 +73,7 @@
 
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: var(--card-set-gap);
     }
   }
 
@@ -100,7 +100,7 @@
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
 
-  transform: translateY(100%);
+  transform: translateY(101%);
   @include transition(transform);
 
   padding: 63px 24px;

@@ -5,14 +5,28 @@
 }
 
 .footer-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex($positionH: space-between, $positionV: baseline);
+  }
+}
+
+.tablet-footer {
+  @media screen and (min-width: 768px) {
+    @include centeredFlex($positionH: space-between, $positionV: baseline);
+  }
+}
+
+.address-box {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 }
 
 .address {
-  margin-right: auto;
-
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
   &__text {
     margin-top: 20px;
 
@@ -47,6 +61,13 @@
       color: var(--interactive-color);
       outline: none;
     }
+  }
+}
+
+.footer-social {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    margin-bottom: 60px;
   }
 }
 
@@ -87,11 +108,13 @@
 /* Підписка на розсилку */
 
 .subscribe {
-  @include centeredFlex($positionV: flex-end);
-}
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 
-.subscribe__form {
-  @include centeredFlex($positionV: flex-end);
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex($positionV: flex-end);
+  }
 }
 
 .subscribe__box {
@@ -116,9 +139,9 @@
 }
 
 .subscribe__input {
-  min-width: 358px;
+  min-width: 100%;
   padding: 15px 16px;
-  margin-right: 12px;
+
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 
@@ -140,6 +163,19 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-color: var(--interactive-color);
     outline-color: var(--interactive-color);
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 358px;
+    margin-right: 12px;
   }
 }
 
@@ -176,4 +212,10 @@
   position: absolute;
   top: 14px;
   right: 28px;
+}
+
+.subscribe__form {
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex($positionV: flex-end);
+  }
 }
