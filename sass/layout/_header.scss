@@ -37,6 +37,7 @@
 
   &.is-open {
     display: block;
+    overflow-y: scroll;
   }
 
   @media screen and (min-width: 768px) {
@@ -51,14 +52,14 @@
 }
 
 .mobile-social {
-  position: absolute;
-  left: 40px;
-  bottom: 48px;
   display: flex;
-  margin-top: auto;
 
   @media screen and (min-width: 768px) {
     display: none;
+  }
+
+  &__item {
+    margin-top: 64px;
   }
 
   &__item:not(:last-child) {
