@@ -141,16 +141,20 @@ a {
   }
 }
 
+.menu-container {
+  background-color: var(--white-text-background-color);
+  z-index: 1;
+}
+
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
-    width: 100vw;
-    height: 796px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100vw;
+    height: 100vh;
     padding: 48px 40px;
-    background-color: var(--white-text-background-color);
   }
 }
 
@@ -1461,6 +1465,7 @@ a {
   height: 100%;
   overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
   opacity: 1;
   -webkit-transition: opacity 250ms var(--time-function);
   transition: opacity 250ms var(--time-function);
@@ -1476,13 +1481,13 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
   padding: 40px;
   background-color: var(--white-text-background-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
   -webkit-transition: -webkit-transform 250ms var(--time-function);
   transition: -webkit-transform 250ms var(--time-function);
   transition: transform 250ms var(--time-function);
@@ -1496,22 +1501,19 @@ a {
 
 @media screen and (max-width: 1199px) {
   .modal {
-    width: 450px;
-    height: 609px;
+    max-width: 450px;
   }
 }
 
 @media screen and (max-width: 479px) {
   .modal {
     width: 100vw;
-    height: 609px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
-    height: 581px;
   }
 }
 

@@ -21,17 +21,18 @@
 }
 
 .menu-container {
+  background-color: var(--white-text-background-color);
+  z-index: 1;
+
   @media screen and (max-width: 767px) {
     display: none;
-    width: 100vw;
-    height: 796px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100vw;
+    height: 100vh;
 
     padding: 48px 40px;
-
-    background-color: var(--white-text-background-color);
   }
 
   &.is-open {
@@ -81,8 +82,6 @@
     width: 100%;
   }
 }
-
-// правий марджін на лого на моб версії треба забрати і перевірити чи потрібен він на інших версіях?
 
 .nav-list {
   @media screen and (max-width: 767px) {
